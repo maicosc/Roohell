@@ -135,7 +135,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Coletaveis_0
+      name: Fruta
       rect:
         serializedVersion: 2
         x: 440
@@ -143,7 +143,7 @@ TextureImporter:
         width: 227
         height: 146
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -156,7 +156,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coletaveis_1
+      name: Fruta2
       rect:
         serializedVersion: 2
         x: 1542
@@ -164,7 +164,7 @@ TextureImporter:
         width: 232
         height: 145
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,7 +177,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coletaveis_2
+      name: Fogo
       rect:
         serializedVersion: 2
         x: 475
@@ -185,7 +185,7 @@ TextureImporter:
         width: 105
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -198,7 +198,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coletaveis_3
+      name: Fogo2
       rect:
         serializedVersion: 2
         x: 1580
@@ -206,7 +206,7 @@ TextureImporter:
         width: 105
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -221,14 +221,18 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e0e9a133784899b49b8bea1d9ce1abb5
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fogo: 1792522396233126141
+      Fogo2: -2577708846538856334
+      Fruta: -977179341324680751
+      Fruta2: 3532469202023106448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace Platformer
 {
-    public class PlayerController : MonoBehaviour
+    public class PInimigo_IA : MonoBehaviour
     {
         public float movingSpeed;
-        public float jumpForce;
+        
         private float moveInput;
-        private bool doubleJump = true;
+       
 
         private bool facingRight = true;
         [HideInInspector]
@@ -39,25 +39,10 @@ namespace Platformer
            
             moveInput = 1;
             Vector3 direction = transform.right * moveInput;
-            transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, movingSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, transform.position - direction, movingSpeed * Time.deltaTime);
             animator.SetInteger("playerState", 1); // Turn on run animation
 
-            if (isGrounded) {
-                doubleJump = true;
-            }
-
-            if (Input.GetKeyDown(KeyCode.Space) &&
-                (isGrounded || (!isGrounded && doubleJump)))
-            {
-                if (!isGrounded)
-                {
-                    doubleJump = false;
-                    rigidbody.velocity =
-                        new Vector2(rigidbody.velocity.x, 0);
-                }
-                rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-            }
-            if (!isGrounded)animator.SetInteger("playerState", 2); // Turn on jump animation
+            
 
             if(facingRight == false && moveInput > 0)
             {
@@ -81,27 +66,6 @@ namespace Platformer
         {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.transform.position, 0.2f);
             isGrounded = colliders.Length > 1;
-        }
-
-        private void OnCollisionEnter2D(Collision2D other)
-        {
-            if (other.gameObject.tag == "Enemy")
-            {
-                deathState = true; // Say to GameManager that player is dead
-            }
-            else
-            {
-                deathState = false;
-            }
-        }
-
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.gameObject.tag == "Coin")
-            {
-                //gameManager.coinsCounter += 1;
-                Destroy(other.gameObject);
-            }
         }
     }
 }
