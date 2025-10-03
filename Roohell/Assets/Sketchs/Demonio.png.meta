@@ -300,7 +300,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Demonio_0: 2305835515484381038
+      Demonio_1: -3553873679095654930
+      Demonio_2: -1845789373407171413
+      Demonio_3: -877522107902300118
+      Demonio_4: 6142857530708170383
+      Demonio_5: -4498107770288653103
+      Demonio_6: -283324315680405440
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
